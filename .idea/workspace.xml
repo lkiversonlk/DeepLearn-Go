@@ -2,19 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bab60411-e1d0-4a6f-b81a-bd7d84410db2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/deepLearn.iml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/GOPATH__deepLearn_.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Go_SDK.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/deepLearn" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/MNIST.go" afterPath="$PROJECT_DIR$/core/MNIST.go" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Maths.go" afterPath="$PROJECT_DIR$/utils/Maths.go" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/network.go" afterPath="$PROJECT_DIR$/core/network.go" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/rect.go" afterPath="$PROJECT_DIR$/core/rect.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.go" afterPath="$PROJECT_DIR$/main.go" />
     </list>
     <ignored path="deepLearn.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,6 +73,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="lkiversonlk" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -200,6 +198,7 @@
     <property name="configurable.Global.libraries.is.expanded" value="true" />
     <property name="configurable.Project.libraries.is.expanded" value="true" />
     <property name="configurable.Module.libraries.is.expanded" value="false" />
+    <property name="GO_FMT" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -319,12 +318,20 @@
       <workItem from="1462069026222" duration="4853000" />
       <workItem from="1462073903795" duration="3529000" />
       <workItem from="1462239503468" duration="400000" />
-      <workItem from="1462243185239" duration="588000" />
+      <workItem from="1462243185239" duration="666000" />
     </task>
+    <task id="LOCAL-00001" summary="update">
+      <created>1462243846759</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1462243846759</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20143000" />
+    <option name="totallyTimeSpent" value="20221000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
@@ -351,6 +358,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
