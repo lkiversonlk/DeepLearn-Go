@@ -1,8 +1,9 @@
-package src
+package utils
 
 import (
 	"math"
 )
+
 func Sigmoid(x float64) float64{
 	return 1.0 / (1 + math.Pow(math.E, -1 * x))
 }

@@ -1,8 +1,8 @@
-package src
+package core
 
 import (
 	"math/rand"
-	//"math"
+	"github.com/lkiversonlk/DeepLearn-Go/utils"
 	"fmt"
 	"strconv"
 )
@@ -60,7 +60,7 @@ func (network *Network)shake(input *Rect) *Rect {
 		panic("shake only accepts input whose length is the same with the network: " + string(network.Layers[0]))
 	}else{
 		for i := 0; i < network.LayerCount -1; i ++ {
-			input = network.Weights[i].Junc(input).Add(network.Biases[i]).Operate(OperateWrapper(Sigmoid))
+			input = network.Weights[i].Junc(input).Add(network.Biases[i]).Operate(OperateWrapper(utils.Sigmoid))
 		}
 
 		return input
@@ -117,13 +117,13 @@ func (net *Network)backprop(input *Rect, output *Rect) (deltaW, deltaB []*Rect){
 
 	for i := 1; i < net.LayerCount; i ++{
 		zRect[i] = net.Weights[i - 1].Junc(sigmoided).Add(net.Biases[i - 1])
-		sigmoided = zRect[i].Copy().Operate(OperateWrapper(Sigmoid))
+		sigmoided = zRect[i].Copy().Operate(OperateWrapper(utils.Sigmoid))
 		activations[i] = sigmoided
 	}
 
 	delta := activations[net.LayerCount - 1].Minus(output).Operate(
 		func(data float64, x, y int) float64{
-			return data * SigmoidPrime(zRect[net.LayerCount - 1].Get(x, y));
+			return data * utils.SigmoidPrime(zRect[net.LayerCount - 1].Get(x, y));
 		});
 
 	deltaB = make([]*Rect, net.LayerCount - 1, net.LayerCount - 1)
@@ -138,7 +138,7 @@ func (net *Network)backprop(input *Rect, output *Rect) (deltaW, deltaB []*Rect){
 				//update := data * SigmoidPrime(zRect[layer].Get(x, y));
 				//fmt.Printf("delta is %v\n", update)
 				//return update
-				return data * SigmoidPrime(zRect[layer].Get(x, y));
+				return data * utils.SigmoidPrime(zRect[layer].Get(x, y));
 			});
 		deltaB[layer - 1] = delta
 		deltaW[layer - 1] = delta.Junc(activations[layer - 1].Transpose())

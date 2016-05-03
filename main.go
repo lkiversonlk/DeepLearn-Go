@@ -1,9 +1,9 @@
 package main
 
 import (
-	"./src"
 	"fmt"
 	"path/filepath"
+	"github.com/lkiversonlk/DeepLearn-Go/core"
 )
 func main() {
 
@@ -19,12 +19,12 @@ func main() {
 		fmt.Println("read image file ", imagePath, " label file", labelPath)
 	}
 
-	mnist, err1 := src.ParseMNIST(imagePath, labelPath)
-	mninstTest, err2 := src.ParseMNIST(testImagePath, testLabelPath)
+	mnist, err1 := core.ParseMNIST(imagePath, labelPath)
+	mninstTest, err2 := core.ParseMNIST(testImagePath, testLabelPath)
 	if(err1 != nil || err2 != nil){
 		fmt.Println("fail to load MNIST data");
 	}else{
-		network := src.NetNetwork([]int{ mnist.ImageHeight * mnist.ImageRow, 30, 10})
+		network := core.NetNetwork([]int{ mnist.ImageHeight * mnist.ImageRow, 30, 10})
 		network.SGD(mnist, 100, 60, 3.0, mninstTest)
 
 	}
