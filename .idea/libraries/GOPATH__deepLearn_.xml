@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="GOPATH &lt;deepLearn&gt;">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../go/src/github.com" />
+    </CLASSES>
+    <SOURCES />
+    <excluded>
+      <root url="file://$PROJECT_DIR$" />
+    </excluded>
+  </library>
+</component>
